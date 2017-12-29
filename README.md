@@ -22,9 +22,9 @@ touch Component/About.js
 touch Component/Surfing.js
 touch Component/Tech.js
 
-## Add a AppBar
+## Add an AppBar
 We’ll add the appBar by editing App.js :
-
+*
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -44,7 +44,7 @@ class App extends Component {
 }
 
 export default App;
-
+*
 *If you run the server this will return an error:*
 Failed to compile.
 
@@ -54,7 +54,9 @@ Failed to compile.
 
 ## We need to import Multithemeprovider and AppBar
 Add the following lines under the import statement in App.js:
+
 *import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 import AppBar from ‘material-ui/AppBar';*
 
 # Enable the material-ui Drawer
@@ -63,12 +65,17 @@ Our AppBar has a “hamburger’ icon but no actions or menu.  We want to enable
 ## Import Drawer and MenuItem
 
 Add the following lines under the import statements in App.js:
+
+
 *import Drawer from 'material-ui/Drawer';
+
 import MenuItem from ‘material-ui/MenuItem’;*
 
 
-Define the initial state and a couple of methods for opening and closing the slide in menu
+### Define the initial state and a couple of methods for opening and closing the slide in menu
 Within the App class define
+
+
 *constructor(props) {
     super(props);
     this.state = {open: false};
@@ -76,6 +83,7 @@ Within the App class define
 
   handleDrawerToggle = () => this.setState({open: !this.state.open});
   handleDrawerClose = () => this.setState({open: false});*
+
 
 Define the Drawer after the AppBar
 *
